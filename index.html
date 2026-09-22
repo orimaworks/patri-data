@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PatriData - Relevé patrimonial</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="header-container">
+
+            <a href="#" class="logo">
+                <span class="logo-mark">VRA</span>
+                <span class="logo-text">
+                    <strong>PatriData</strong>
+                    <small>Gestion patrimoniale</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                ☰
+            </button>
+
+            <nav class="navigation">
+
+                <a href="#" class="nav-link active">
+                    Tableau de bord
+                </a>
+
+                <a href="#" class="nav-link">
+                    Biens
+                </a>
+
+                <a href="#" class="nav-link">
+                    Relevés
+                </a>
+
+                <a href="#" class="nav-link">
+                    Exports
+                </a>
+
+            </nav>
+
+            <div class="user-area">
+
+                <div class="user-info">
+                    <span class="user-avatar">M</span>
+
+                    <div>
+                        <strong>User</strong>
+                        <small>Gestionnaire</small>
+                    </div>
+                </div>
+
+                <button class="logout-button">
+                    Déconnexion
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="main-container">
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div>
+
+                <span class="breadcrumb">
+                    Patrimoine / Relevé
+                </span>
+
+                <h1>
+                    Nouveau relevé patrimonial
+                </h1>
+
+                <p>
+                    Renseignez les caractéristiques et l'état des composants du bien.
+                </p>
+
+            </div>
+
+            <div class="page-actions">
+
+                <button class="button button-secondary">
+                    Annuler
+                </button>
+
+                <button class="button button-primary">
+                    Enregistrer le relevé
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROGRESS
+        ========================== -->
+
+        <section class="progress-card">
+
+            <div class="progress-header">
+
+                <div>
+                    <strong>Progression du relevé</strong>
+                    <span>6 informations complétées sur 10</span>
+                </div>
+
+                <strong>60 %</strong>
+
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-value"></div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FORM
+        ========================== -->
+
+        <form class="property-form">
+
+
+            <!-- =========================
+                 BIEN
+            ========================== -->
+
+            <section class="card">
+
+                <div class="card-header">
+
+                    <div class="section-icon">
+                        🏢
+                    </div>
+
+                    <div>
+                        <h2>Bien concerné</h2>
+
+                        <p>
+                            Sélectionnez le patrimoine faisant l'objet du relevé.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+
+                        <label for="property">
+                            Bien <span class="required">*</span>
+                        </label>
+
+                        <select id="property" name="property">
+
+                            <option value="">
+                                Sélectionner un bien...
+                            </option>
+
+                            <option value="bien-001">
+                                Résidence Les Tilleuls — 12 rue Victor Hugo
+                            </option>
+
+                            <option value="bien-002">
+                                Résidence Bellevue — 8 avenue de la République
+                            </option>
+
+                            <option value="bien-003">
+                                Résidence Les Acacias — 24 rue Jean Jaurès
+                            </option>
+
+                            <option value="bien-004">
+                                Résidence du Parc — 5 rue Pasteur
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="property-summary">
+
+                        <div>
+                            <span>Type</span>
+                            <strong>Immeuble collectif</strong>
+                        </div>
+
+                        <div>
+                            <span>Construction</span>
+                            <strong>1987</strong>
+                        </div>
+
+                        <div>
+                            <span>Logements</span>
+                            <strong>24</strong>
+                        </div>
+
+                        <div>
+                            <span>Étages</span>
+                            <strong>4</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 INFORMATIONS GENERALES
+            ========================== -->
+
+            <section class="card">
+
+                <div class="card-header">
+
+                    <div class="section-icon">
+                        📋
+                    </div>
+
+                    <div>
+                        <h2>Informations générales</h2>
+
+                        <p>
+                            Informations générales relevées sur le bâtiment.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="floors">
+                            Nombre d'étages
+                        </label>
+
+                        <input
+                            type="number"
+                            id="floors"
+                            name="floors"
+                            min="0"
+                            value="4"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="windows">
+                            Nombre de fenêtres
+                        </label>
+
+                        <input
+                            type="number"
+                            id="windows"
+                            name="windows"
+                            min="0"
+                            value="18"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="construction-year">
+                            Année de construction
+                        </label>
+
+                        <input
+                            type="number"
+                            id="construction-year"
+                            name="construction-year"
+                            min="1800"
+                            max="2100"
+                            value="1987"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="building-material">
+                            Structure principale
+                        </label>
+
+                        <select id="building-material">
+
+                            <option>Béton</option>
+                            <option>Brique</option>
+                            <option>Pierre</option>
+                            <option>Bois</option>
+                            <option>Métal</option>
+                            <option>Mixte</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 COMPOSANT
+            ========================== -->
+
+            <section class="card">
+
+                <div class="card-header">
+
+                    <div class="section-icon">
+                        🎨
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Revêtement des murs
+                        </h2>
+
+                        <p>
+                            Définissez le revêtement, son état et son cycle de renouvellement.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="wall-covering">
+                            Revêtement
+                        </label>
+
+                        <select id="wall-covering">
+
+                            <option>
+                                Peinture
+                            </option>
+
+                            <option>
+                                Papier peint
+                            </option>
+
+                            <option>
+                                Enduit
+                            </option>
+
+                            <option>
+                                Faïence
+                            </option>
+
+                            <option>
+                                Aucun
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="wall-condition">
+                            État
+                        </label>
+
+                        <select id="wall-condition">
+
+                            <option>
+                                Neuf
+                            </option>
+
+                            <option selected>
+                                Bon
+                            </option>
+
+                            <option>
+                                Moyen
+                            </option>
+
+                            <option>
+                                Dégradé
+                            </option>
+
+                            <option>
+                                Très dégradé
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="installation-date">
+                            Date de pose
+                        </label>
+
+                        <input
+                            type="date"
+                            id="installation-date"
+                            value="2021-06-15"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="lifespan">
+                            Durée de vie théorique
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="lifespan"
+                                value="8"
+                                min="1"
+                            >
+
+                            <span>ans</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="lifecycle">
+
+                        <div class="lifecycle-info">
+
+                            <span>
+                                Échéance théorique
+                            </span>
+
+                            <strong>
+                                15 juin 2029
+                            </strong>
+
+                        </div>
+
+                        <div class="lifecycle-status status-ok">
+                            Dans 2 ans et 9 mois
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SOLS
+            ========================== -->
+
+            <section class="card">
+
+                <div class="card-header">
+
+                    <div class="section-icon">
+                        ▦
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Revêtement des sols
+                        </h2>
+
+                        <p>
+                            Caractéristiques et état du revêtement.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="floor-covering">
+                            Revêtement
+                        </label>
+
+                        <select id="floor-covering">
+
+                            <option>
+                                Carrelage
+                            </option>
+
+                            <option selected>
+                                Sol PVC
+                            </option>
+
+                            <option>
+                                Parquet
+                            </option>
+
+                            <option>
+                                Moquette
+                            </option>
+
+                            <option>
+                                Béton
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="floor-condition">
+                            État
+                        </label>
+
+                        <select id="floor-condition">
+
+                            <option>
+                                Neuf
+                            </option>
+
+                            <option>
+                                Bon
+                            </option>
+
+                            <option selected>
+                                Moyen
+                            </option>
+
+                            <option>
+                                Dégradé
+                            </option>
+
+                            <option>
+                                Très dégradé
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="floor-date">
+                            Date de pose
+                        </label>
+
+                        <input
+                            type="date"
+                            id="floor-date"
+                            value="2019-09-01"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="floor-lifespan">
+                            Durée de vie théorique
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="floor-lifespan"
+                                value="15"
+                                min="1"
+                            >
+
+                            <span>ans</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 MENUISERIES
+            ========================== -->
+
+            <section class="card">
+
+                <div class="card-header">
+
+                    <div class="section-icon">
+                        🪟
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Menuiseries
+                        </h2>
+
+                        <p>
+                            Informations relatives aux fenêtres et portes-fenêtres.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="window-material">
+                            Matériau
+                        </label>
+
+                        <select id="window-material">
+
+                            <option selected>
+                                PVC
+                            </option>
+
+                            <option>
+                                Bois
+                            </option>
+
+                            <option>
+                                Aluminium
+                            </option>
+
+                            <option>
+                                Mixte
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="window-glazing">
+                            Type de vitrage
+                        </label>
+
+                        <select id="window-glazing">
+
+                            <option>
+                                Simple vitrage
+                            </option>
+
+                            <option selected>
+                                Double vitrage
+                            </option>
+
+                            <option>
+                                Triple vitrage
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="window-condition">
+                            État général
+                        </label>
+
+                        <select id="window-condition">
+
+                            <option>
+                                Neuf
+                            </option>
+
+                            <option selected>
+                                Bon
+                            </option>
+
+                            <option>
+                                Moyen
+                            </option>
+
+                            <option>
+                                Dégradé
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="window-date">
+                            Date de pose
+                        </label>
+
+                        <input
+                            type="date"
+                            id="window-date"
+                            value="2018-04-12"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 OBSERVATIONS
+            ========================== -->
+
+            <section class="card">
+
+                <div class="card-header">
+
+                    <div class="section-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Observations
+                        </h2>
+
+                        <p>
+                            Ajoutez toute information complémentaire.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="observations">
+                        Commentaires
+                    </label>
+
+                    <textarea
+                        id="observations"
+                        rows="6"
+                        placeholder="Saisissez vos observations..."
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 ACTIONS
+            ========================== -->
+
+            <section class="form-actions">
+
+                <button
+                    type="button"
+                    class="button button-secondary"
+                >
+                    Enregistrer comme brouillon
+                </button>
+
+
+                <div class="action-group">
+
+                    <button
+                        type="button"
+                        class="button button-secondary"
+                    >
+                        Exporter JSON
+                    </button>
+
+                    <button
+                        type="button"
+                        class="button button-excel"
+                    >
+                        ↓ Exporter vers Excel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="button button-primary"
+                    >
+                        Enregistrer le relevé
+                    </button>
+
+                </div>
+
+            </section>
+
+        </form>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <span>
+            PatriData — Prototype
+        </span>
+
+        <span>
+            Version 0.1
+        </span>
+
+    </footer>
+
+
+</body>
+</html>
