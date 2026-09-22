@@ -1,0 +1,1086 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --primary: #0066a1;
+    --primary: #e5004e;
+    --primary-dark: #004c78;
+    --primary-light: #e8f3fa;
+
+    --success: #198754;
+    --warning: #d89b00;
+    --danger: #c0392b;
+
+    --background: #f4f6f8;
+    --surface: #ffffff;
+
+    --border: #dce1e6;
+
+    --text: #263238;
+    --text-light: #6c757d;
+
+    --radius: 8px;
+
+    --shadow:
+        0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    background: #ffffff;
+
+    border-bottom:
+        1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.header-container {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    min-height: 72px;
+
+    padding:
+        0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    min-width: 220px;
+}
+
+
+.logo-mark {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+
+.logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.logo-text strong {
+
+    font-size: 17px;
+}
+
+
+.logo-text small {
+
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navigation {
+
+    display: flex;
+
+    gap: 6px;
+
+    flex: 1;
+}
+
+
+.nav-link {
+
+    text-decoration: none;
+
+    color: var(--text-light);
+
+    padding:
+        10px 14px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+
+.nav-link:hover {
+
+    background: var(--background);
+
+    color: var(--text);
+}
+
+
+.nav-link.active {
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.user-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.user-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.user-info > div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.user-info strong {
+
+    font-size: 13px;
+}
+
+
+.user-info small {
+
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+.user-avatar {
+
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-weight: bold;
+}
+
+
+.logout-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-container {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        35px 24px 60px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.breadcrumb {
+
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+.page-header h1 {
+
+    margin-top: 7px;
+
+    font-size: 28px;
+
+    font-weight: 600;
+}
+
+
+.page-header p {
+
+    margin-top: 6px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.page-actions,
+.action-group {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
+
+.button {
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding:
+        11px 17px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        0.2s ease;
+}
+
+
+.button-primary {
+
+    background: var(--primary);
+
+    color: white;
+}
+
+
+.button-primary:hover {
+
+    background: var(--primary-dark);
+}
+
+
+.button-secondary {
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    color: var(--text);
+}
+
+
+.button-secondary:hover {
+
+    background: var(--background);
+}
+
+
+.button-excel {
+
+    background: #217346;
+
+    color: white;
+}
+
+
+.button-excel:hover {
+
+    background: #185c38;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress-card {
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 18px 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.progress-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+.progress-header div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.progress-header strong {
+
+    font-size: 13px;
+}
+
+
+.progress-header span {
+
+    font-size: 12px;
+
+    color: var(--text-light);
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 7px;
+
+    background: #e9ecef;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.progress-value {
+
+    width: 60%;
+
+    height: 100%;
+
+    /*background: var(--primary);*/
+    background: #0066a1;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 20px;
+
+    padding: 24px;
+}
+
+
+.card-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-bottom: 25px;
+}
+
+
+.section-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: var(--primary-light);
+
+    font-size: 17px;
+}
+
+
+.card-header h2 {
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+.card-header p {
+
+    margin-top: 3px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group.full {
+
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #46515a;
+}
+
+
+.required {
+
+    color: var(--danger);
+}
+
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    padding:
+        11px 12px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 102, 161, 0.10);
+}
+
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+/* =========================================
+   PROPERTY SUMMARY
+========================================= */
+
+.property-summary {
+
+    grid-column: 1 / -1;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 6px;
+
+    background: #fafbfc;
+
+    overflow: hidden;
+}
+
+
+.property-summary div {
+
+    padding:
+        15px 17px;
+
+    border-right:
+        1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.property-summary div:last-child {
+
+    border-right: none;
+}
+
+
+.property-summary span {
+
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+.property-summary strong {
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   INPUT WITH UNIT
+========================================= */
+
+.input-with-unit {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.input-with-unit input {
+
+    padding-right: 45px;
+}
+
+
+.input-with-unit span {
+
+    position: absolute;
+
+    right: 13px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   LIFECYCLE
+========================================= */
+
+.lifecycle {
+
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #f7faf8;
+
+    border:
+        1px solid #dce9e1;
+
+    border-radius: 7px;
+
+    padding: 15px 18px;
+}
+
+
+.lifecycle-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.lifecycle-info span {
+
+    font-size: 11px;
+
+    color: var(--text-light);
+}
+
+
+.lifecycle-info strong {
+
+    font-size: 14px;
+}
+
+
+.lifecycle-status {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    padding:
+        6px 10px;
+
+    border-radius: 20px;
+}
+
+
+.status-ok {
+
+    color: var(--success);
+
+    background: #e8f5ed;
+}
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.form-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding:
+        10px 0 30px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        20px 24px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .header-container {
+
+        gap: 15px;
+    }
+
+
+    .navigation {
+
+        display: none;
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+        margin-left: auto;
+    }
+
+
+    .user-area {
+
+        display: none;
+    }
+
+
+    .page-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .page-actions {
+
+        width: 100%;
+    }
+
+
+    .page-actions .button {
+
+        flex: 1;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .property-summary {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .property-summary div:nth-child(2) {
+
+        border-right: none;
+    }
+
+
+    .property-summary div:nth-child(-n+2) {
+
+        border-bottom:
+            1px solid var(--border);
+    }
+
+
+    .lifecycle {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .form-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .action-group {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .action-group .button {
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header-container {
+
+        padding:
+            0 15px;
+    }
+
+
+    .main-container {
+
+        padding:
+            25px 15px 40px;
+    }
+
+
+    .logo {
+
+        min-width: auto;
+    }
+
+
+    .logo-text small {
+
+        display: none;
+    }
+
+
+    .page-header h1 {
+
+        font-size: 23px;
+    }
+
+
+    .card {
+
+        padding: 18px;
+    }
+
+
+    .property-summary {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .property-summary div {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--border);
+    }
+
+
+    .property-summary div:last-child {
+
+        border-bottom: none;
+    }
+
+
+    .footer {
+
+        padding:
+            15px;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
